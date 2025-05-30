@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 minusPoint.addEventListener('click', () => {
                     const index = data.carts.findIndex(c => c.id === parseInt(minusPoint.dataset.cartId));
-                    if(index !== -1 && data.carts[index].score ){ // Не позволяем уменьшать ниже нуля
+                    if(index !== -1 ){ // Не позволяем уменьшать ниже нуля
                         data.carts[index].score--;
                         data.render(); // Ререндерим страницу
                     }
